@@ -17,30 +17,34 @@
         }
 
         .container {
-            padding: 50px;
+            padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+            max-width: 90%; /* Membatasi lebar kontainer agar tidak terlalu besar pada layar besar */
+            margin: 0 auto; /* Mengatur kontainer agar berada di tengah halaman */
         }
 
         h1 {
             color: #00796b;
-            font-size: 3em;
+            font-size: 2.5em; /* Mengurangi ukuran font untuk responsif */
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            font-size: 1.1em; /* Menyesuaikan ukuran font untuk teks yang lebih kecil */
+            margin-bottom: 20px; /* Mengurangi margin bawah untuk teks yang lebih kecil */
+            line-height: 1.5; /* Menambah jarak antar baris untuk keterbacaan */
         }
 
         .button {
             display: inline-block;
-            padding: 15px 25px;
-            font-size: 18px;
+            padding: 12px 20px;
+            font-size: 16px;
             color: #fff;
             background-color: #4caf50;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             transition: background-color 0.3s;
+            margin: 10px; /* Menambahkan jarak antar tombol */
         }
 
         .button:hover {
@@ -48,8 +52,33 @@
         }
 
         .balloons {
-            width: 100px;
+            width: 80px; /* Menyesuaikan ukuran gambar untuk tampilan lebih kecil */
             height: auto;
+            margin: 20px 0; /* Menambahkan jarak vertikal di sekitar gambar */
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+            }
+
+            .button {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+
+            .balloons {
+                width: 100px;
+            }
         }
     </style>
 </head>
@@ -59,15 +88,13 @@
         <img src="https://image.shutterstock.com/image-vector/colorful-balloons-on-blue-sky-260nw-1524484596.jpg"
             alt="Balloons" class="balloons">
         <h1>Wish untukmu</h1>
-        <p>Hai, py. Selamat ulang tahun. Semoga di tahun ini dan kedepannya hari harimu selalu dilancarkan. Semoga kamu
-            sehat selaluuu, makan yang bener kamu dan jangan lupa minum air putih. </p>
-        <p>
-            Semoga kuliah kamu dan kegiatan organisasi nya juga lancar yaaa. Aku bangga sama kamu. Kamu hebat. Kamu
-            keren.
+        <p>Hai, py. Selamat ulang tahun. Semoga di tahun ini dan kedepannya hari-harimu selalu dilancarkan. Semoga kamu
+            sehat selaluuu, makan yang bener dan jangan lupa minum air putih.</p>
+        <p>Semoga kuliah kamu dan kegiatan organisasi juga lancar yaaa. Aku bangga sama kamu. Kamu hebat. Kamu keren.
             Tapi, walaupun kamu udah keren sekarang, aku yakin kamu bisa lebih keren lagi di tahun depan. Semoga kamu
             bisa selalu berkembang menjadi Pypy yang lebih keren lagiyaaa.</p>
         <p>May Allah bless your day, week, month, year, and life</p>
-        <p>Once again, happy birthday🎉</p>
+        <p>Once again, happy birthday 🎉</p>
         <a href="index.html" class="button">Home</a>
     </div>
 </body>
