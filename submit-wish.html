@@ -17,30 +17,34 @@
         }
 
         .container {
-            padding: 50px;
+            padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+            max-width: 90%; /* Membatasi lebar kontainer agar tidak terlalu besar pada layar besar */
+            margin: 0 auto; /* Mengatur kontainer agar berada di tengah halaman */
         }
 
         h1 {
             color: #d81b60;
-            font-size: 3em;
+            font-size: 2.5em; /* Mengurangi ukuran font untuk responsif */
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            font-size: 1.1em; /* Menyesuaikan ukuran font untuk teks yang lebih kecil */
+            margin-bottom: 20px; /* Mengurangi margin bawah untuk teks yang lebih kecil */
+            line-height: 1.5; /* Menambah jarak antar baris untuk keterbacaan */
         }
 
         .button {
             display: inline-block;
-            padding: 15px 25px;
-            font-size: 18px;
+            padding: 12px 20px;
+            font-size: 16px;
             color: #fff;
             background-color: #ec407a;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             transition: background-color 0.3s;
+            margin: 10px; /* Menambahkan jarak antar tombol */
         }
 
         .button:hover {
@@ -52,21 +56,51 @@
             height: 100px;
             margin-top: 10px;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 8px;
             border: 1px solid #ddd;
             font-size: 1em;
         }
 
         .confirmation {
-            font-size: 1.2em;
+            font-size: 1.1em; /* Menyesuaikan ukuran font untuk responsif */
             color: #d81b60;
             display: none;
             margin-top: 20px;
+            line-height: 1.5; /* Menambah jarak antar baris untuk keterbacaan */
         }
 
         .confetti {
-            width: 100px;
+            width: 80px; /* Menyesuaikan ukuran gambar untuk tampilan lebih kecil */
             height: auto;
+            margin: 20px 0; /* Menambahkan jarak vertikal di sekitar gambar */
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+            }
+
+            .button {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+
+            .confetti {
+                width: 100px;
+            }
+
+            .confirmation {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -77,7 +111,7 @@
             class="confetti">
         <h1>Masukkan Wish-mu</h1>
         <p>Ayoo tulis permintaan kamu buat tahun ini. Tenang, aku nggak bisa liat apa yang kamu tulis kok. Jadi kamu
-            bebas nulis apa aja semau kamu</p>
+            bebas nulis apa aja semau kamu.</p>
         <form id="wishForm">
             <textarea id="wishInput" placeholder="Masukkan wish-mu di sini..." required></textarea>
             <br>
