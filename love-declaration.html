@@ -16,30 +16,35 @@
         }
 
         .container {
-            padding: 50px;
+            padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+            max-width: 90%; /* Membatasi lebar kontainer agar tidak terlalu besar pada layar besar */
+            margin: 0 auto; /* Mengatur kontainer agar berada di tengah halaman */
+            position: relative; /* Menambahkan relative positioning untuk elemen yang bergerak */
         }
 
         h1 {
             color: #d81b60;
-            font-size: 3em;
+            font-size: 2.5em; /* Mengurangi ukuran font untuk responsif */
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            font-size: 1.1em; /* Menyesuaikan ukuran font untuk teks yang lebih kecil */
+            margin-bottom: 20px; /* Mengurangi margin bawah untuk teks yang lebih kecil */
+            line-height: 1.5; /* Menambah jarak antar baris untuk keterbacaan */
         }
 
         .button {
             display: inline-block;
-            padding: 15px 25px;
-            font-size: 18px;
+            padding: 12px 20px;
+            font-size: 16px;
             color: #fff;
             background-color: #ec407a;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
+            margin: 10px; /* Menambahkan jarak antar tombol */
         }
 
         .button:hover {
@@ -54,9 +59,24 @@
             transform: scale(1.1);
         }
 
-        .container p {
-            font-size: 1.5em;
-            margin-bottom: 50px;
+        @media (min-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+            }
+
+            .button {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -65,17 +85,15 @@
     <div class="container">
         <h1>❤️</h1>
         <p>Hai Py, aku tau kita belum lama banget kenal, tapi aku ngerasa kaya aku udah tau kamu dari lama dan udah tau
-            gimana kamu. </p>
+            gimana kamu.</p>
         <p>Aku udah bilang ke kamu kan, aku suka banyak hal dari kamu. Aku suka cara kamu ngomong, aku suka reminder
-            dari kamu buat aku absen, aku suka tiktok kamu
-            yang kamu kirimin tiap malem, aku suka pap semua pap dari kamu, aku suka hangout sama kamu, dan aku suka
-            kamu.</p>
-        <p> I think today is the day that you are not related anymore with Foolish one. Yep, because that day has come
-        </p>
+            dari kamu buat aku absen, aku suka tiktok kamu yang kamu kirimin tiap malem, aku suka pap semua pap dari kamu,
+            aku suka hangout sama kamu, dan aku suka kamu.</p>
+        <p>I think today is the day that you are not related anymore with Foolish one. Yep, because that day has come.</p>
         <p>I love you py, Will you accept my love and be my gf?</p>
         <a href="#" id="yesButton" class="button">Yes</a>
         <a href="#" id="noButton" class="button moving-button">No</a>
-        <p id="message" style="display:none; font-size: 1.5em; color: #d81b60;"></p>
+        <p id="message" style="display:none; font-size: 1.1em; color: #d81b60; line-height: 1.5;"></p>
     </div>
     <script>
         document.getElementById('yesButton').addEventListener('click', function () {
