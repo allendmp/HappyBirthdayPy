@@ -52,8 +52,8 @@
         }
 
         .balloons {
-            width: 80px; /* Menyesuaikan ukuran gambar untuk tampilan lebih kecil */
-            height: auto;
+            max-width: 100%; /* Membatasi lebar gambar agar fit dalam kontainer secara horizontal */
+            height: auto; /* Menjaga rasio aspek gambar tetap utuh */
             margin: 20px 0; /* Menambahkan jarak vertikal di sekitar gambar */
         }
 
@@ -77,14 +77,14 @@
             }
 
             .balloons {
-                width: 100px;
+                max-width: 80%; /* Menyesuaikan lebar maksimum gambar pada perangkat yang lebih besar */
             }
         }
     </style>
 </head>
 
 <body>
-     <audio id="backgroundMusic" autoplay loop>
+    <audio id="backgroundMusic" autoplay loop>
         <source src="Red Velvet.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
